@@ -1,0 +1,35 @@
+{
+  "name": "chemname-visualizer",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ChemName Visualizer —— 有机化学命名可视化教学工具（完全离线）",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/copy-assets.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/copy-assets.mjs",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@rdkit/rdkit": "2025.3.4-1.0.0",
+    "jszip": "^3.10.1",
+    "kekule": "1.0.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "skia-canvas": "^3.0.8",
+    "tailwindcss": "^4.1.4",
+    "typescript": "~5.6.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.4"
+  }
+}

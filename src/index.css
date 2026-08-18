@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/*
+ * ChemName Visualizer 主题（Tailwind CSS v4）
+ * 主色 #3B82F6；骨架碳蓝、取代基/官能团红、氢灰、背景白/浅灰
+ */
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-primary-light: #dbeafe;
+  --color-skeleton: #1d4ed8;      /* 母体碳链 */
+  --color-substituent: #dc2626;   /* 取代基/官能团 */
+  --color-hydrogen: #9ca3af;      /* 氢原子 */
+  --color-hetero: #059669;        /* 杂原子 */
+  --color-canvas-bg: #ffffff;
+  --color-panel-bg: #f9fafb;
+  --color-ink: #1f2937;
+  --color-ink-soft: #6b7280;
+  --font-sans: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #f3f4f6;
+  color: var(--color-ink);
+  font-size: 15px;
+}
+
+/* 滚动条适配屏幕共享 */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* 通用动画 */
+@keyframes cv-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cv-fade-in { animation: cv-fade-in 0.25s ease both; }
+
+@keyframes cv-pop {
+  0% { opacity: 0; transform: scale(0.4); }
+  70% { transform: scale(1.12); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.cv-pop { animation: cv-pop 0.35s ease both; }
+
+@keyframes cv-pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.9; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+.cv-pulse-ring { animation: cv-pulse-ring 1.2s ease-out infinite; }
+
+/* 覆盖层 SVG 通用样式 */
+.cv-overlay-svg text {
+  font-family: var(--font-sans);
+  user-select: none;
+}

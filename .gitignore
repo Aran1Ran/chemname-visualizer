@@ -1,0 +1,26 @@
+# 依赖与构建产物
+node_modules/
+dist/
+public/RDKit_minimal.wasm
+*.tsbuildinfo
+
+# 日志
+dev-server.log
+preview.log
+install-*.log
+
+# 测试生成产物（preview 测试输出 PNG 到 preview/）
+preview/
+
+# 开发期文档与调试产物（不对外发布）
+docs/
+dump-config.txt
+probe-body.json
+开发反馈.txt
+
+# 开发工具（DSH 注入器/路由套件等，与本项目无关）
+injector-tgz/
+pnpm-tool/
+dsh-*/
+*.tgz
+*.zip
