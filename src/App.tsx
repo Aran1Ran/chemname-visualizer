@@ -88,6 +88,11 @@ function Shell() {
           <ExportPanel />
         )}
       </main>
+
+      {/* 页脚提示：教学辅助性质声明 */}
+      <footer className="shrink-0 bg-white border-t border-gray-200 px-4 py-2 text-center text-[12px] text-ink-soft">
+        教学辅助工具 · 解析与命名结果请人工核验 · 完全离线运行
+      </footer>
     </div>
   );
 }
