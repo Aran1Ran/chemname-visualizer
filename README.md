@@ -1,5 +1,8 @@
 # ChemName Visualizer · 有机化学命名可视化教学工具
 
+![CI](https://github.com/Aran1Ran/chemname-visualizer/actions/workflows/ci.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
+
 > 输入中文系统命名（或常见俗名）→ 自动解析并生成结构式，提供**分步解析动画、错误诊断、反向命名练习、等效氢与氢谱分析、同分异构体浏览、官能团高亮、碳链编号动画、顺反/手性判定、官能团转化路线图**等教学辅助功能。
 >
 > 面向高中化学一对一网课与课堂投屏场景。**完全离线**：零 CDN、零外部 API，所有计算在浏览器本地完成，断网可用。
