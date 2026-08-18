@@ -21,6 +21,9 @@ jobs:
         run: npm ci
 
       # prebuild 钩子（scripts/copy-assets.mjs）自动将 RDKit wasm 复制到 public/，无需提交二进制
+      - name: Copy RDKit wasm to public/
+        run: npm run predev
+
       - name: Run tests (850 cases)
         run: npm test
 
