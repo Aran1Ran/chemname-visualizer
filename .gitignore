@@ -24,3 +24,6 @@ pnpm-tool/
 dsh-*/
 *.tgz
 *.zip
+
+# 本地工具安装暂存（gh CLI 等）
+.gh-install/
